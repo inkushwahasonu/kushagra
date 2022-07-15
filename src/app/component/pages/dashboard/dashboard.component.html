@@ -1,0 +1,55 @@
+<section>
+  <div class="container">
+    <h2>Employee Table</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
+      inventore!
+    </p>
+    <input
+      class="form-control"
+      id="myInput"
+      type="text"
+      placeholder="Search.."
+    />
+    <br />
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr class="">
+          <th>Employee ID</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>Grade</th>
+          <th>Project Name</th>
+          <th>Gender</th>
+          <th>Infection <br /><span>(true / false)</span></th>
+          <th>No. of Dose</th>
+          <th>Days <br /><span>(after taking booster)</span></th>
+          <th>certificate</th>
+        </tr>
+      </thead>
+      <tbody id="myTable">
+        <tr *ngFor="let employee of infectedEmployees">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.city }}</td>
+          <td>{{ employee.grade }}</td>
+          <td>{{ employee.project }}</td>
+          <td>{{ employee.gender }}</td>
+          <td>{{ employee.infection }}</td>
+          <td>{{ employee.booster }}</td>
+          <td>{{ employee.daysCompleted }}</td>
+          <td>
+            <a [href]="employee.certificate" download="proposed_file_name"
+              >Download</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+      laboriosam!
+    </p>
+  </div>
+</section>
